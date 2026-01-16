@@ -14,7 +14,6 @@ btn.addEventListener("click", () => {
         if (container.firstElementChild){
             container.innerHTML = "";
         }
-        let i = 0;
         for (let i = 1; i <= num; i++) {
             const div_row = document.createElement("div");
             div_row.id = "square_row_" + i;
@@ -23,8 +22,11 @@ btn.addEventListener("click", () => {
             for (let j = 1; j <= num; j++) {
                 const div_column = document.createElement("div");
                 div_column.id = "square_column_" + j;
+                let hoverCount = 0;
                 div_column.addEventListener("mouseover", () => {
-                    div_column.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+                    if (hoverCount < 10){
+                        hoverCount++}
+                    div_column.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${hoverCount / 10})`;
                 });
                 square_row.appendChild(div_column);
             }
