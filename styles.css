@@ -11,15 +11,22 @@ select {
     font: inherit;
 }
 
+button{
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
 body{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items:  center;
+    gap: 20px
 }
 
 #container{
-    border: 2px solid red;
+    border: 2px solid rgba(67, 67, 67, 0.5);
     width: 960px;
     height: 960px;
     display: flex;
@@ -28,7 +35,7 @@ body{
 }
 
 #container div{
-    border: 1px solid blue;
+    outline: 0.5px solid rgba(232, 232, 232, 0.5);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
