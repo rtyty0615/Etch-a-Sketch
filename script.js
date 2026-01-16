@@ -24,7 +24,7 @@ btn.addEventListener("click", () => {
                 const div_column = document.createElement("div");
                 div_column.id = "square_column_" + j;
                 div_column.addEventListener("mouseover", () => {
-                    div_column.style.backgroundColor = "red";
+                    div_column.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
                 });
                 square_row.appendChild(div_column);
             }
