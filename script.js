@@ -9,6 +9,9 @@ for (let i = 1; i <= 16; i++){
     for (let j = 1; j <= 16; j++) {
         const div_column = document.createElement("div");
         div_column.id = "square_column_" + j;
+        div_column.addEventListener("mouseover", () => {
+            div_column.style.backgroundColor = "red";
+        });
         square_row.appendChild(div_column);
     }
 }
